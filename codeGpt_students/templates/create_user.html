@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/createuser.css' %}">
+    <script src="https://kit.fontawesome.com/215c5cf425.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+    <div class='Createaccount'>
+        <h1>codeGpt</h1>
+        <div class='Createaccount_box'>
+          <form method="POST" id="post-createuser_form">
+          {% csrf_token %}
+            <h2>Create Account</h2>
+  
+            <div class='InputBoxes'>
+               <p>Name</p>
+              <input placeholder='Name' type='text'  required  id="username" />
+            </div>
+  
+            <div class='InputBoxes'>
+            <p>Email</p>
+              <input placeholder='Email' type='email' required id="email" />
+            </div>
+  
+            <div class='InputBoxes'>
+            <p>Contact</p>
+              <input placeholder='Contact' type='tel'  id="contact" />
+            </div>
+  
+            <div class='InputBoxes'>
+            <p>College Name</p>
+              <input placeholder='College Name' type='text' id="college" />
+            </div>
+  
+            <div class='InputBoxes'>
+            <p>Course name</p>
+              <input placeholder='Course' type='text' id="course"/>
+            </div>
+  
+           <div class='InputBoxes'>
+              <p>Year</p>
+              <input placeholder='Year' type='number' name="year" id="year"/>
+            </div>
+  
+            <div class='InputBoxes'>
+              <p>Password</p>
+              <input placeholder='Password' type='password' id="password" name="password"/>
+            </div>
+  
+            <div class='InputBoxes'>
+            
+              <button class='createAccountButton' type="submit" >SUBMIT</button>
+            </div>
+  
+  
+          </form> 
+        </div>
+      </div>
+      <script src="{% static 'script/createUser.js' %}"></script>
+</body>
+
+</html>

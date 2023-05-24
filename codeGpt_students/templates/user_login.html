@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/userlogin.css' %}">
+    <script src="https://kit.fontawesome.com/215c5cf425.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="LoginForm">
+        <div class='LoginSideImg'>
+            <img src="{% static 'img/loginSideImg.jpg' %}" />
+        </div>
+        <div class='LoginSideForm'>
+            <div>
+                <div class='formLogo'>
+
+                    <h5>codeGpt</h5>
+                </div>
+                <form class='LoginFormBox' method="POST" id="post-form">
+                    {% csrf_token %}
+                    <h2>Welcome back !</h2>
+                    <div class='emailInput'>
+                      
+                        <i class="fa-solid fa-envelope"></i>
+                        <input placeholder='Email' name="email" id="email" type="email"/>
+                    </div>
+
+                    <div class='passwordInput'>
+                  
+                        <i class="fa-solid fa-lock"></i>
+                        <input type='password' placeholder='Password' name="password" id="password" />
+                    </div>
+
+                    <div class='checkInput'>
+                        <input type='checkbox' />
+                        <p>keep me logged in</p>
+                    </div>
+                    <button type="submit">Login</button>
+                    <br />
+                    <div class='forgotPassword'>
+                        <a href='#'>Forgot password</a>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class='createAccountLink'>
+                <p>don't have account ? <button class='signup' >create
+                        account</button></p>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'script/userlogin.js' %}"></script>
+</body>
+</html>
